@@ -29,8 +29,8 @@ def getWeather():
         clock.config(text=current_time)
 
         #weather
-        api = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=416b13dc795dbaabb813c8744f4f2e8e"
-        #api = f"https://api.openweathermap.org/data/3.0/onecall?lat={location.latitude}&lon={location.latitude}&appid=416b13dc795dbaabb813c8744f4f2e8e"
+        api = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="
+       
         json_data = requests.get(api).json()
         condition = json_data['weather'][0]['main']
         description = json_data['weather'][0]['description']
